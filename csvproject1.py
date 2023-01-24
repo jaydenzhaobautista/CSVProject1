@@ -29,6 +29,10 @@ print(df.iloc[0:4])
 # reading of one column of the CSV file
 df2 = print(df["2005"])
 
+hdict = {year: df[year].sum() for year in df.columns if year.isnumeric()}
+
+print(hdict)
+
 # turning every column of the CSV file into a list
 hurricaneList2005 = df["2005"].tolist()
 hurricaneList2006 = df["2006"].tolist()
